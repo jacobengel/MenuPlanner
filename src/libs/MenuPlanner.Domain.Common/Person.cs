@@ -1,4 +1,4 @@
-namespace MenuPlanner.Domain
+namespace MenuPlanner.Domain.Common
 {
     public abstract class Person
     {
@@ -6,7 +6,7 @@ namespace MenuPlanner.Domain
 
         public string LastName { get; set; }
 
-        public Address Address { get; set; }
+        public Address Address { get; set; } = new Address();
 
         public string EmailAddress { get; set; }
 

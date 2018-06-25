@@ -1,4 +1,4 @@
-namespace MenuPlanner.Domain
+namespace MenuPlanner.Domain.Menus
 {
     public enum Unit
     {
