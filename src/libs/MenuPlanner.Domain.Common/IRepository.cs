@@ -1,8 +1,9 @@
 namespace MenuPlanner.Domain.Common
 {
+    using System;
     using System.Collections.Generic;
 
-    public interface IRepository<T>
+    public interface IRepository<T> : IDisposable
     {
         T Get(string id);
 

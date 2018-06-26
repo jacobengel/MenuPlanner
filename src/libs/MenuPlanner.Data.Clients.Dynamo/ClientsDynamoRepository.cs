@@ -34,7 +34,7 @@ namespace MenuPlanner.Data.Clients.Dynamo
 
         public IList<Client> GetAll()
         {
-            
+            throw new NotImplementedException();
         }
 
         public void Save(Client client)

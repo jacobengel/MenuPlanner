@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuPlanner.Domain.Menus", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuPlanner.Data.Clients.Dynamo", "MenuPlanner.Data.Clients.Dynamo\MenuPlanner.Data.Clients.Dynamo.csproj", "{9E920826-8C39-409C-8E25-D6254ACAD625}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuPlanner.Data.Clients.RDS", "MenuPlanner.Data.Clients.RDS\MenuPlanner.Data.Clients.RDS.csproj", "{CD3730EE-AA5A-46B2-81D5-63457529374C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,5 +88,17 @@ Global
 		{9E920826-8C39-409C-8E25-D6254ACAD625}.Release|x64.Build.0 = Release|Any CPU
 		{9E920826-8C39-409C-8E25-D6254ACAD625}.Release|x86.ActiveCfg = Release|Any CPU
 		{9E920826-8C39-409C-8E25-D6254ACAD625}.Release|x86.Build.0 = Release|Any CPU
+		{CD3730EE-AA5A-46B2-81D5-63457529374C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD3730EE-AA5A-46B2-81D5-63457529374C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD3730EE-AA5A-46B2-81D5-63457529374C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CD3730EE-AA5A-46B2-81D5-63457529374C}.Debug|x64.Build.0 = Debug|Any CPU
+		{CD3730EE-AA5A-46B2-81D5-63457529374C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CD3730EE-AA5A-46B2-81D5-63457529374C}.Debug|x86.Build.0 = Debug|Any CPU
+		{CD3730EE-AA5A-46B2-81D5-63457529374C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD3730EE-AA5A-46B2-81D5-63457529374C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD3730EE-AA5A-46B2-81D5-63457529374C}.Release|x64.ActiveCfg = Release|Any CPU
+		{CD3730EE-AA5A-46B2-81D5-63457529374C}.Release|x64.Build.0 = Release|Any CPU
+		{CD3730EE-AA5A-46B2-81D5-63457529374C}.Release|x86.ActiveCfg = Release|Any CPU
+		{CD3730EE-AA5A-46B2-81D5-63457529374C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
