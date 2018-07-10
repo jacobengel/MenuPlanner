@@ -8,4 +8,8 @@
     <ProjectReference Include="..\MenuPlanner.Common\MenuPlanner.Common.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="dapper" Version="1.50.5" />
+  </ItemGroup>
+
 </Project>

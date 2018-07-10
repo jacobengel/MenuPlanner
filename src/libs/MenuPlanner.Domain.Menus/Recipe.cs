@@ -2,10 +2,10 @@ namespace MenuPlanner.Domain.Menus
 {
     using System.Collections.Generic;
 
-    public class Recipe
-    {
-        public string Id { get; set; }
+    using Common;
 
+    public class Recipe : Identifiable
+    {
         public string Name { get; set; }
 
         public List<string> Tags { get; set; }

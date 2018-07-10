@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <ItemGroup>
-    <ProjectReference Include="..\MenuPlanner.Domain.Common\MenuPlanner.Domain.Common.csproj" />
-  </ItemGroup>
-
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MenuPlanner.Common\MenuPlanner.Common.csproj" />
+  </ItemGroup>
 
 </Project>

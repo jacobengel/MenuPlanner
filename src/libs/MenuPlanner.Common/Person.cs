@@ -1,6 +1,6 @@
-namespace MenuPlanner.Domain.Common
+namespace MenuPlanner.Common
 {
-    public abstract class Person
+    public abstract class Person : Identifiable
     {
         public string FirstName { get; set; }
 

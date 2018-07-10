@@ -4,8 +4,6 @@ namespace MenuPlanner.Domain.Clients
 
     public class Client : Person
     {
-        public string Id { get; set; }
-
         public Address BillingAddress { get; set; }
     }
 }

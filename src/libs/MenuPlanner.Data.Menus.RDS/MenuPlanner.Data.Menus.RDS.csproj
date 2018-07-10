@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MenuPlanner.Data\MenuPlanner.Data.csproj" />
-    <ProjectReference Include="..\MenuPlanner.Domain.Clients\MenuPlanner.Domain.Clients.csproj" />
+    <ProjectReference Include="..\MenuPlanner.Domain.Menus\MenuPlanner.Domain.Menus.csproj" />
   </ItemGroup>
 
 </Project>

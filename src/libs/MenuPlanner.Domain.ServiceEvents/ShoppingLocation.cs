@@ -1,8 +1,8 @@
-namespace MenuPlanner.Domain
+namespace MenuPlanner.Domain.ServiceEvents
 {
     using Common;
 
-    public class ShoppingLocation
+    public class ShoppingLocation : Identifiable
     {
         public string Name { get; set; }
 
