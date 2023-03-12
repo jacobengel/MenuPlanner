@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MenuPlanner.API\MenuPlanner.API.csproj" />
+    <ProjectReference Include="..\MenuPlanner.Domain\MenuPlanner.Domain.csproj" />
   </ItemGroup>
 
 </Project>

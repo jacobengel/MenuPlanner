@@ -1,6 +1,5 @@
 namespace MenuPlanner.Domain.Models.People
 {
-    using System;
     using System.Collections.Generic;
 
     public class Client : Person

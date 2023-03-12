@@ -1,5 +1,9 @@
 namespace MenuPlanner.Domain.Models.Locations
 {
+    using System.Collections.Generic;
+
+    using People;
+
     public class Location
     {
         public string Id { get; set; }

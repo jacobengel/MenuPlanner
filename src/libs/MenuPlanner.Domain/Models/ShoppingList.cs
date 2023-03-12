@@ -1,11 +1,13 @@
 namespace MenuPlanner.Domain.Models
 {
-    using System;
     using System.Collections.Generic;
+
+    using Recipes;
+    using Locations;
 
     public class ShoppingList
     {
-        public ShoppingLocation Location { get; set; }
+        public Location Location { get; set; }
 
         public List<Ingredient> Items { get; set; }
     }

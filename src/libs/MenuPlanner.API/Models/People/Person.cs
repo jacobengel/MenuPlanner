@@ -2,7 +2,7 @@ namespace MenuPlanner.API.Models.People
 {
     public class Person
     {
-        public string Id { get; }
+        public string Id { get; set; }
         
         public string FirstName { get; set; }
 

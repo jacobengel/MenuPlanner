@@ -1,7 +1,5 @@
 namespace MenuPlanner.Domain.Models.People
 {
-    using System;
-
     public class Person
     {
         public string Id { get; set; }

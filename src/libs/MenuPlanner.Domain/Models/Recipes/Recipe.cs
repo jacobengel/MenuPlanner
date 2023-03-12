@@ -1,6 +1,6 @@
 namespace MenuPlanner.Domain.Models.Recipes
 {
-    using System;
+    using System.Collections.Generic;
 
     public class Recipe
     {
