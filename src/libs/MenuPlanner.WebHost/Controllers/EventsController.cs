@@ -8,35 +8,37 @@ namespace MenuPlanner.WebHost.Controllers
 
     using API.Models.Events;
 
+    [ApiController]
     [Route("events")]
-    public class EventsController : Controller
+    public class EventsController : ControllerBase
     {
         [HttpGet("{id}")]
-        public HttpResponse GetEvent(string id)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public ActionResult<Event> GetEvent(string id)
         {
             throw new NotImplementedException();
         }
 
         [HttpGet]
-        public HttpResponse GetEvents()
+        public ActionResult<List<Event>> GetEvents()
         {
             throw new NotImplementedException();
         }
 
         [HttpPost]
-        public HttpResponse CreateEvent(Event event)
+        public ActionResult CreateEvent(Event evnt)
         {
             throw new NotImplementedException();
         }
 
         [HttpPut("{id}")]
-        public HttpResponse UpdateEvent([FromUri]string id, Event event)
+        public ActionResult UpdateEvent([FromUri]string id, Event evnt)
         {
             throw new NotImplementedException();
         }
 
         [HttpDelete("{id}")]
-        public HttpResponse DeleteEvent([FromUri]string id)
+        public ActionResult DeleteEvent([FromUri]string id)
         {
             throw new NotImplementedException();
         }        
