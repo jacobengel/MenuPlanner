@@ -1,4 +1,4 @@
-namespace MenuPlanner.Domain
+namespace MenuPlanner.API.Models.Recipes
 {
     using System;
 

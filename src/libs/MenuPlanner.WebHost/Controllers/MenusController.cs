@@ -5,7 +5,7 @@ namespace MenuPlanner.WebHost.Controllers
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
 
-    using Domain;
+    using API.Models.Events;
 
     public class MenusController : Controller
     {
@@ -22,13 +22,19 @@ namespace MenuPlanner.WebHost.Controllers
         }
 
         [HttpPost]
-        public HttpResponse CreateMenu(Menu menu)
+        public HttpResponse CreateMenu([FromBody]Menu menu)
         {
             throw new NotImplementedException();
         }
 
-        [HttpPut]
-        public HttpResponse UpdateMenu(Menu menu)
+        [HttpPut("{id}")]
+        public HttpResponse UpdateMenu(string id, [FromBody]Menu menu)
+        {
+            throw new NotImplementedException();
+        }
+
+        [HttpDelete("{id}")]
+        public HttpResponse DeleteMenu(string id)
         {
             throw new NotImplementedException();
         }

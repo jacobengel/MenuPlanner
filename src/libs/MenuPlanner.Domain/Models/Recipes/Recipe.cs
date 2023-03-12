@@ -1,10 +1,14 @@
-namespace MenuPlanner.Domain
+namespace MenuPlanner.Domain.Models.Recipes
 {
     using System;
 
     public class Recipe
     {
-        public List<Ingredient> Ingredients { get; set; }
+        public string Id { get; set; }
+
+        public string Name { get; set; }
+
+        public List<RecipeIngredient> Ingredients { get; set; }
 
         public Dictionary<uint, string> Instructions { get; set; }
 

@@ -1,4 +1,4 @@
-namespace MenuPlanner.Domain
+namespace MenuPlanner.Domain.Models.Events
 {
     using System;
 

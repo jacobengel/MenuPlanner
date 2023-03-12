@@ -5,7 +5,7 @@ namespace MenuPlanner.WebHost.Controllers
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
 
-    using Domain;
+    using API.Models.Recipes;
 
     [Route("recipes")]
     public class RecipesController : Controller
@@ -23,13 +23,19 @@ namespace MenuPlanner.WebHost.Controllers
         }
 
         [HttpPost]
-        public HttpResponse CreateRecipe(Recipe recipe)
+        public HttpResponse CreateRecipe([FromBody]Recipe recipe)
         {
             throw new NotImplementedException();
         }
 
-        [HttpPut]
-        public HttpResponse UpdateRecipe(Recipe recipe)
+        [HttpPut("{id}")]
+        public HttpResponse UpdateRecipe(string id, [FromBody]Recipe recipe)
+        {
+            throw new NotImplementedException();
+        }
+
+        [HttpDelete("{id}")]
+        public HttpResponse DeleteRecipe(string id)
         {
             throw new NotImplementedException();
         }

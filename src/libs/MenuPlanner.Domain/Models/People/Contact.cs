@@ -1,4 +1,4 @@
-namespace MenuPlanner.Domain.People
+namespace MenuPlanner.Domain.Models.People
 {
     using System;
 

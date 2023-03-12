@@ -6,7 +6,7 @@ namespace MenuPlanner.WebHost.Controllers
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
 
-    using Domain.People;
+    using API.Models.People;
 
     [Route("clients")]
     public class ClientsController : Controller
@@ -24,15 +24,21 @@ namespace MenuPlanner.WebHost.Controllers
         }
 
         [HttpPost]
-        public HttpResponse CreateClient(Client client)
+        public HttpResponse CreateClient([FromBody]Client client)
         {
             throw new NotImplementedException();
         }
 
-        [HttpPut]
-        public HttpResponse UpdateClient(Client client)
+        [HttpPut("{id}")]
+        public HttpResponse UpdateClient(string id, [FromBody]Client client)
         {
             throw new NotImplementedException();
         }
+
+        [HttpDelete("{id}")]
+        public HttpResponse DeleteClient(string id)
+        {
+            throw new NotImplementedException();
+        }        
     }
 }

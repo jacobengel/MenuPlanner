@@ -1,43 +1,44 @@
 namespace MenuPlanner.WebHost.Controllers
 {
     using System;
-
+    using System.Collections.Generic;
+    
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
 
-    using API.Models.Recipes;
-    
-    [Route("ingredients")]
-    public class IngredientsController : Controller
+    using API.Models.Locations;
+
+    [Route("locations")]
+    public class LocationsController : Controller
     {
         [HttpGet("{id}")]
-        public HttpResponse GetIngredient(string id)
+        public HttpResponse GetLocation(string id)
         {
             throw new NotImplementedException();
         }
-        
+
         [HttpGet]
-        public HttpResponse GetIngredients()
+        public HttpResponse GetLocations()
         {
             throw new NotImplementedException();
         }
 
         [HttpPost]
-        public HttpResponse CreateIngredient([FromBody]Ingredient ingredient)
+        public HttpResponse CreateLocation([FromBody]Location location)
         {
             throw new NotImplementedException();
         }
 
         [HttpPut("{id}")]
-        public HttpResponse UpdateIgredient(string id, [FromBody]Ingredient ingredient)
+        public HttpResponse UpdateLocation(string id, [FromBody]Location location)
         {
             throw new NotImplementedException();
         }
 
         [HttpDelete("{id}")]
-        public HttpResponse DeleteIngredient(string id)
+        public HttpResponse DeleteLocation(string id)
         {
             throw new NotImplementedException();
-        }
+        }        
     }
 }

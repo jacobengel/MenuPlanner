@@ -1,43 +1,44 @@
 namespace MenuPlanner.WebHost.Controllers
 {
     using System;
-
+    using System.Collections.Generic;
+    
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
 
-    using API.Models.Recipes;
-    
-    [Route("ingredients")]
-    public class IngredientsController : Controller
+    using API.Models.Events;
+
+    [Route("events")]
+    public class EventsController : Controller
     {
         [HttpGet("{id}")]
-        public HttpResponse GetIngredient(string id)
+        public HttpResponse GetEvent(string id)
         {
             throw new NotImplementedException();
         }
-        
+
         [HttpGet]
-        public HttpResponse GetIngredients()
+        public HttpResponse GetEvents()
         {
             throw new NotImplementedException();
         }
 
         [HttpPost]
-        public HttpResponse CreateIngredient([FromBody]Ingredient ingredient)
+        public HttpResponse CreateEvent(Event event)
         {
             throw new NotImplementedException();
         }
 
         [HttpPut("{id}")]
-        public HttpResponse UpdateIgredient(string id, [FromBody]Ingredient ingredient)
+        public HttpResponse UpdateEvent([FromUri]string id, Event event)
         {
             throw new NotImplementedException();
         }
 
         [HttpDelete("{id}")]
-        public HttpResponse DeleteIngredient(string id)
+        public HttpResponse DeleteEvent([FromUri]string id)
         {
             throw new NotImplementedException();
-        }
+        }        
     }
 }

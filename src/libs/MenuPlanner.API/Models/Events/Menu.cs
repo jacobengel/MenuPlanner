@@ -1,7 +1,8 @@
-namespace MenuPlanner.Domain
+namespace MenuPlanner.API.Models.Events
 {
-    using System;
     using System.Collections.Generic;
+
+    using Recipes;
 
     public class Menu
     {

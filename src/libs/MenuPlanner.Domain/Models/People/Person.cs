@@ -1,9 +1,11 @@
-namespace MenuPlanner.Domain.People
+namespace MenuPlanner.Domain.Models.People
 {
     using System;
 
     public class Person
     {
+        public string Id { get; set; }
+        
         public string FirstName { get; set; }
 
         public string LastName  { get; set; }
@@ -20,6 +22,8 @@ namespace MenuPlanner.Domain.People
                 return string.Join(" ", this.FirstName, this.LastName);
             }
         }
+
+        public string PreferredName { get; set; }
 
         public ContactInformation ContactInformation { get; set; }
 
