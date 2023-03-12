@@ -8,35 +8,41 @@ namespace MenuPlanner.WebHost.Controllers
 
     using API.Models.People;
 
+    [ApiController]
     [Route("contacts")]
-    public class ContactsController : Controller
+    public class ContactsController : ControllerBase
     {
         [HttpGet("{id}")]
-        public HttpResponse GetContact(string id)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public ActionResult<Person> GetContact([FromRoute]string id)
         {
             throw new NotImplementedException();
         }
 
         [HttpGet]
-        public HttpResponse GetContacts()
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public ActionResult<List<Person>> GetContacts()
         {
             throw new NotImplementedException();
         }
 
         [HttpPost]
-        public HttpResponse CreateContact([FromBody]Person contact)
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        public ActionResult CreateContact([FromBody]Person contact)
         {
             throw new NotImplementedException();
         }
 
         [HttpPut("{id}")]
-        public HttpResponse UpdateContact(string id, [FromBody]Person contact)
+        [ProducesResponseType(StatusCodes.Status202Accepted)]
+        public ActionResult UpdateContact([FromRoute]string id, [FromBody]Person contact)
         {
             throw new NotImplementedException();
         }
 
         [HttpDelete("{id}")]
-        public HttpResponse DeleteContact(string id)
+        [ProducesResponseType(StatusCodes.Status202Accepted)]
+        public ActionResult DeleteContact([FromRoute]string id)
         {
             throw new NotImplementedException();
         }        

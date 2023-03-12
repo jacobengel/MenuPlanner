@@ -8,35 +8,41 @@ namespace MenuPlanner.WebHost.Controllers
 
     using API.Models.People;
 
+    [ApiController]
     [Route("clients")]
-    public class ClientsController : Controller
+    public class ClientsController : ControllerBase
     {
         [HttpGet("{id}")]
-        public HttpResponse GetClient(string id)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public ActionResult<Client> GetClient([FromRoute]string id)
         {
             throw new NotImplementedException();
         }
 
         [HttpGet]
-        public HttpResponse GetClients()
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public ActionResult<List<Client>> GetClients()
         {
             throw new NotImplementedException();
         }
 
         [HttpPost]
-        public HttpResponse CreateClient([FromBody]Client client)
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        public ActionResult CreateClient([FromBody]Client client)
         {
             throw new NotImplementedException();
         }
 
         [HttpPut("{id}")]
-        public HttpResponse UpdateClient(string id, [FromBody]Client client)
+        [ProducesResponseType(StatusCodes.Status202Accepted)]
+        public ActionResult UpdateClient([FromRoute]string id, [FromBody]Client client)
         {
             throw new NotImplementedException();
         }
 
         [HttpDelete("{id}")]
-        public HttpResponse DeleteClient(string id)
+        [ProducesResponseType(StatusCodes.Status202Accepted)]
+        public ActionResult DeleteClient([FromRoute]string id)
         {
             throw new NotImplementedException();
         }        

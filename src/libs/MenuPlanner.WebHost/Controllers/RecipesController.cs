@@ -1,41 +1,48 @@
 namespace MenuPlanner.WebHost.Controllers
 {
     using System;
+    using System.Collections.Generic;
 
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
 
     using API.Models.Recipes;
 
+    [ApiController]
     [Route("recipes")]
-    public class RecipesController : Controller
+    public class RecipesController : ControllerBase
     {
         [HttpGet("{id}")]
-        public HttpResponse GetRecipe(string id)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public ActionResult<Recipe> GetRecipe([FromRoute]string id)
         {
             throw new NotImplementedException();
         }
 
         [HttpGet]
-        public HttpResponse GetRecipes()
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public ActionResult<List<Recipe>> GetRecipes()
         {
             throw new NotImplementedException();
         }
 
         [HttpPost]
-        public HttpResponse CreateRecipe([FromBody]Recipe recipe)
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        public ActionResult CreateRecipe([FromBody]Recipe recipe)
         {
             throw new NotImplementedException();
         }
 
         [HttpPut("{id}")]
-        public HttpResponse UpdateRecipe(string id, [FromBody]Recipe recipe)
+        [ProducesResponseType(StatusCodes.Status202Accepted)]
+        public ActionResult UpdateRecipe([FromRoute]string id, [FromBody]Recipe recipe)
         {
             throw new NotImplementedException();
         }
 
         [HttpDelete("{id}")]
-        public HttpResponse DeleteRecipe(string id)
+        [ProducesResponseType(StatusCodes.Status202Accepted)]
+        public ActionResult DeleteRecipe([FromRoute]string id)
         {
             throw new NotImplementedException();
         }
