@@ -1,5 +1,7 @@
 namespace MenuPlanner.WebHost.Mappers
 {
+    using System.Linq;
+    
     using Domain.Models;
 
     public class ClientMapper : IMapper<API.Models.People.Client, Domain.Models.People.Client>
@@ -17,7 +19,7 @@ namespace MenuPlanner.WebHost.Mappers
 
         public Domain.Models.People.Client Map(API.Models.People.Client src)
         {
-            var dest = new Domain.Models.People.Client
+            return new Domain.Models.People.Client
             {
                 Id = src.Id,
                 FirstName = src.FirstName,
@@ -25,15 +27,13 @@ namespace MenuPlanner.WebHost.Mappers
                 PreferredName = src.PreferredName,
                 Address = this._addressMapper.Map(src.Address),
                 ContactInformation = this._contactInformationMapper.Map(src.ContactInformation),
-                //Contacts
+                Contacts = src.Contacts.Select(c => new Domain.Models.People.Contact { Id = c.Id, RelationshipToClient = c.RelationshipToClient.Convert() }).ToList()
             };
-
-            return dest;
         }
 
         public API.Models.People.Client Map(Domain.Models.People.Client src)
         {
-            var dest = new API.Models.People.Client
+            return new API.Models.People.Client
             {
                 Id = src.Id,
                 FirstName = src.FirstName,
@@ -41,10 +41,8 @@ namespace MenuPlanner.WebHost.Mappers
                 PreferredName = src.PreferredName,
                 Address = this._addressMapper.Map(src.Address),
                 ContactInformation = this._contactInformationMapper.Map(src.ContactInformation),
-                //Contacts
+                Contacts = src.Contacts.Select(c => new API.Models.People.Contact { Id = c.Id, RelationshipToClient = c.RelationshipToClient.Convert() }).ToList()
             };
-
-            return dest;
         }
     }
 }

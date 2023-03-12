@@ -1,7 +1,9 @@
 namespace MenuPlanner.Domain.Models.People
 {
-    public class Contact : Person
+    public class Contact
     {
-        public Relationship Relationship { get; set; }
+        public string Id { get; set; }
+
+        public Relationship? RelationshipToClient { get; set; }
     }
 }
