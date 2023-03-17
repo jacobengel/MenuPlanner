@@ -1,6 +1,6 @@
-/home/ec2-user/.dotnet/dotnet restore
+sudo /home/ec2-user/.dotnet/dotnet restore /var/www/MenuPlanner.WebHost/MenuPlanner.WebHost.csproj
 
-/home/ec2-user/.dotnet/dotnet publish --configuration release -o /var/www/ --runtime active
+sudo /home/ec2-user/.dotnet/dotnet publish --configuration release -o /var/www/app/ --runtime linux-x64
 
 systemctl enable website.service
 systemctl start website.service
