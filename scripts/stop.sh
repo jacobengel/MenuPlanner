@@ -1,2 +1,2 @@
-systemctl stop website.service
-systemctl disable website.service
+sudo systemctl stop website.service
+sudo systemctl disable website.service
