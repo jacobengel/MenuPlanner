@@ -61,8 +61,14 @@ namespace MenuPlanner.WebHost.Controllers
 
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status202Accepted)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> UpdateIgredient([FromRoute]string id, [FromBody]Ingredient ingredient)
         {
+            if (ingredient is null || string.IsNullOrEmpty(id))
+            {
+                return BadRequest();
+            }
+            
             ingredient.Id = id;
             var domIngredient = this._ingredientMapper.Map(ingredient);
 

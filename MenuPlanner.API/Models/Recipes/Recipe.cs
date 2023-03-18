@@ -1,11 +1,13 @@
 namespace MenuPlanner.API.Models.Recipes
 {
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     public class Recipe
     {
         public string Id { get; set; }
 
+        [Required]
         public string Name { get; set; }
 
         public List<RecipeIngredient> Ingredients { get; set; }

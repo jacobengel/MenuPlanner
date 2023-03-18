@@ -6,11 +6,6 @@ namespace MenuPlanner.WebHost.Mappers
     {
         public Domain.Models.Recipes.Ingredient Map(API.Models.Recipes.Ingredient src)
         {
-            if (src is null)
-            {
-                return null;
-            }
-
             return new Domain.Models.Recipes.Ingredient
             {
                 Id = src.Id,
@@ -20,11 +15,6 @@ namespace MenuPlanner.WebHost.Mappers
 
         public API.Models.Recipes.Ingredient Map(Domain.Models.Recipes.Ingredient src)
         {
-            if (src is null)
-            {
-                return null;
-            }
-
             return new API.Models.Recipes.Ingredient
             {
                 Id = src.Id,

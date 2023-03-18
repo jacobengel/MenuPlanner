@@ -1,6 +1,5 @@
 namespace MenuPlanner.API.Models.Recipes
 {
-    using System;
 
     public enum Unit
     {

@@ -16,8 +16,6 @@
         private IDynamoDBContext _context;
         private IMapper<Ingredient, Domain.Models.Recipes.Ingredient> _ingredientMapper;
 
-        private const string IngredientCategory = "Ingredient";
-
         public MenuPlannerDynamoDBIngredientRepository(
             IDynamoDBContext context,
             IMapper<Ingredient, Domain.Models.Recipes.Ingredient> ingredientMapper)
@@ -28,14 +26,19 @@
 
         public async Task<Domain.Models.Recipes.Ingredient> GetAsync(string id)
         {
-            var ingredient = await this._context.LoadAsync<Ingredient>(IngredientCategory, id);
+            var ingredient = await this._context.LoadAsync<Ingredient>(DynamoDbConstants.IngredientCategory, id);
+
+            if (ingredient is null)
+            {
+                return null;
+            }
 
             return this._ingredientMapper.Map(ingredient);
         }
 
         public async Task<List<Domain.Models.Recipes.Ingredient>> GetAsync()
         {
-            var queryFilter = new QueryFilter("category", QueryOperator.Equal, IngredientCategory);
+            var queryFilter = new QueryFilter(DynamoDbConstants.Category, QueryOperator.Equal, DynamoDbConstants.IngredientCategory);
 
             var queryOperationConfig = new QueryOperationConfig { Filter = queryFilter };
 
@@ -67,7 +70,7 @@
 
         public async Task DeleteAsync(string id)
         {
-            await this._context.DeleteAsync<Ingredient>(IngredientCategory, id);
+            await this._context.DeleteAsync<Ingredient>(DynamoDbConstants.IngredientCategory, id);
         }
     }
 }

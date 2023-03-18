@@ -6,11 +6,6 @@ namespace MenuPlanner.DynamoDb.Mappers
     {
         public Domain.Models.Recipes.Ingredient Map(Models.Recipes.Ingredient src)
         {
-            if (src is null)
-            {
-                return null;
-            }
-
             return new Domain.Models.Recipes.Ingredient
             {
                 Id = src.Id,
@@ -20,11 +15,6 @@ namespace MenuPlanner.DynamoDb.Mappers
 
         public Models.Recipes.Ingredient Map(Domain.Models.Recipes.Ingredient src)
         {
-            if (src is null)
-            {
-                return null;
-            }
-
             return new Models.Recipes.Ingredient
             {
                 Id = src.Id,
