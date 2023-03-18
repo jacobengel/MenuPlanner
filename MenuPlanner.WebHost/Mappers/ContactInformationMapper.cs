@@ -1,6 +1,6 @@
 namespace MenuPlanner.WebHost.Mappers
 {
-    using Domain.Models;
+    using Domain;
 
     public class ContactInformationMapper : IMapper<Domain.Models.ContactInformation, API.Models.ContactInformation>
     {

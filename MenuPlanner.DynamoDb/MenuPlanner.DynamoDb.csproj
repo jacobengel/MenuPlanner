@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.102.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MenuPlanner.Domain\MenuPlanner.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

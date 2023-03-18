@@ -1,19 +1,26 @@
+using Amazon.DynamoDBv2;
+using Amazon.DynamoDBv2.DataModel;
+
+using MenuPlanner.Domain;
+using MenuPlanner.DynamoDb;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+builder.Services.AddAWSService<IAmazonDynamoDB>();
+builder.Services.AddScoped<IDynamoDBContext, DynamoDBContext>();
+
+builder.Services.AddScoped<IMapper<MenuPlanner.API.Models.Recipes.Ingredient, MenuPlanner.Domain.Models.Recipes.Ingredient>, MenuPlanner.WebHost.Mappers.IngredientMapper>();
+builder.Services.AddScoped<IMapper<MenuPlanner.DynamoDb.Models.Recipes.Ingredient, MenuPlanner.Domain.Models.Recipes.Ingredient>, MenuPlanner.DynamoDb.Mappers.IngredientMapper>();
+
+builder.Services.AddScoped<IMenuPlannerRepository<MenuPlanner.Domain.Models.Recipes.Ingredient>, MenuPlannerDynamoDBIngredientRepository>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseDeveloperExceptionPage();
 }
 
 app.UseHttpsRedirection();

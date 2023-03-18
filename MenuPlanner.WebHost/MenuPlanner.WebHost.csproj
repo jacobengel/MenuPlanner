@@ -7,12 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.102.8" />
+    <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MenuPlanner.API\MenuPlanner.API.csproj" />
     <ProjectReference Include="..\MenuPlanner.Domain\MenuPlanner.Domain.csproj" />
+    <ProjectReference Include="..\MenuPlanner.DynamoDB\MenuPlanner.DynamoDB.csproj" />
   </ItemGroup>
-  
+
 </Project>

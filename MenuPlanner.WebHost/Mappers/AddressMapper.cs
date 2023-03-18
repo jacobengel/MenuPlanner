@@ -1,6 +1,6 @@
 namespace MenuPlanner.WebHost.Mappers
 {
-    using Domain.Models;
+    using Domain;
 
     public class AddressMapper : IMapper<Domain.Models.Address, API.Models.Address>
     {

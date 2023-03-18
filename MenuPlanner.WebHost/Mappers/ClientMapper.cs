@@ -2,7 +2,7 @@ namespace MenuPlanner.WebHost.Mappers
 {
     using System.Linq;
     
-    using Domain.Models;
+    using Domain;
 
     public class ClientMapper : IMapper<API.Models.People.Client, Domain.Models.People.Client>
     {
