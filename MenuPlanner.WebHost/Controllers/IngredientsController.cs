@@ -23,7 +23,7 @@ namespace MenuPlanner.WebHost.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<List<Ingredient>> GetIngredients()
         {
-            throw new NotImplementedException();
+            return Ok("Hey it's your ingredients!");
         }
 
         [HttpPost]
