@@ -15,7 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\MenuPlanner.API\MenuPlanner.API.csproj" />
     <ProjectReference Include="..\MenuPlanner.Domain\MenuPlanner.Domain.csproj" />
-    <ProjectReference Include="..\MenuPlanner.DynamoDB\MenuPlanner.DynamoDB.csproj" />
+    <ProjectReference Include="..\MenuPlanner.DynamoDb\MenuPlanner.DynamoDb.csproj" />
   </ItemGroup>
 
 </Project>
