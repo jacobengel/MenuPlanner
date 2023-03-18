@@ -3,7 +3,7 @@ Description=Start the Website
 
 [Service]
 WorkingDirectory=/var/www/
-ExecStart=/home/ec2-user/.dotnet/dotnet /var/www/app/MenuPlanner.Host.dll
+ExecStart=/home/ec2-user/.dotnet/dotnet /var/www/app/MenuPlanner.WebHost.dll
 Restart=always
 RestartSec=10
 KillSignal=SIGINT
